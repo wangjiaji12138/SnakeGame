@@ -3,7 +3,7 @@
 
 #include <vector>
 #include "SDL.h"
-
+using namespace std;
 class Snake{
 public:
     enum class Direciton{ kUp, kDown, kLeft,kRight };
@@ -20,8 +20,7 @@ public:
 
     Direciton direction = Direciton::kUp;
 
-
-    float speed{0.1f};
+    float speed{0.05f};
     int size{1};
     bool alive{true};
     float head_x;

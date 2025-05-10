@@ -117,137 +117,137 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named SnakeGame
+# Target rules for targets named MySnakeGame
 
 # Build rule for target.
-SnakeGame: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SnakeGame
-.PHONY : SnakeGame
+MySnakeGame: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MySnakeGame
+.PHONY : MySnakeGame
 
 # fast build rule for target.
-SnakeGame/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/build
-.PHONY : SnakeGame/fast
+MySnakeGame/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MySnakeGame.dir/build.make CMakeFiles/MySnakeGame.dir/build
+.PHONY : MySnakeGame/fast
 
-src/controller.o: src/controller.cpp.o
-.PHONY : src/controller.o
-
-# target to build an object file
-src/controller.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/controller.cpp.o
-.PHONY : src/controller.cpp.o
-
-src/controller.i: src/controller.cpp.i
-.PHONY : src/controller.i
-
-# target to preprocess a source file
-src/controller.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/controller.cpp.i
-.PHONY : src/controller.cpp.i
-
-src/controller.s: src/controller.cpp.s
-.PHONY : src/controller.s
-
-# target to generate assembly for a file
-src/controller.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/controller.cpp.s
-.PHONY : src/controller.cpp.s
-
-src/game.o: src/game.cpp.o
-.PHONY : src/game.o
+mysrc/controller.o: mysrc/controller.cpp.o
+.PHONY : mysrc/controller.o
 
 # target to build an object file
-src/game.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/game.cpp.o
-.PHONY : src/game.cpp.o
+mysrc/controller.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MySnakeGame.dir/build.make CMakeFiles/MySnakeGame.dir/mysrc/controller.cpp.o
+.PHONY : mysrc/controller.cpp.o
 
-src/game.i: src/game.cpp.i
-.PHONY : src/game.i
+mysrc/controller.i: mysrc/controller.cpp.i
+.PHONY : mysrc/controller.i
 
 # target to preprocess a source file
-src/game.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/game.cpp.i
-.PHONY : src/game.cpp.i
+mysrc/controller.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MySnakeGame.dir/build.make CMakeFiles/MySnakeGame.dir/mysrc/controller.cpp.i
+.PHONY : mysrc/controller.cpp.i
 
-src/game.s: src/game.cpp.s
-.PHONY : src/game.s
+mysrc/controller.s: mysrc/controller.cpp.s
+.PHONY : mysrc/controller.s
 
 # target to generate assembly for a file
-src/game.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/game.cpp.s
-.PHONY : src/game.cpp.s
+mysrc/controller.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MySnakeGame.dir/build.make CMakeFiles/MySnakeGame.dir/mysrc/controller.cpp.s
+.PHONY : mysrc/controller.cpp.s
 
-src/main.o: src/main.cpp.o
-.PHONY : src/main.o
+mysrc/game.o: mysrc/game.cpp.o
+.PHONY : mysrc/game.o
 
 # target to build an object file
-src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
+mysrc/game.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MySnakeGame.dir/build.make CMakeFiles/MySnakeGame.dir/mysrc/game.cpp.o
+.PHONY : mysrc/game.cpp.o
 
-src/main.i: src/main.cpp.i
-.PHONY : src/main.i
+mysrc/game.i: mysrc/game.cpp.i
+.PHONY : mysrc/game.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+mysrc/game.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MySnakeGame.dir/build.make CMakeFiles/MySnakeGame.dir/mysrc/game.cpp.i
+.PHONY : mysrc/game.cpp.i
 
-src/main.s: src/main.cpp.s
-.PHONY : src/main.s
+mysrc/game.s: mysrc/game.cpp.s
+.PHONY : mysrc/game.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+mysrc/game.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MySnakeGame.dir/build.make CMakeFiles/MySnakeGame.dir/mysrc/game.cpp.s
+.PHONY : mysrc/game.cpp.s
 
-src/renderer.o: src/renderer.cpp.o
-.PHONY : src/renderer.o
+mysrc/main.o: mysrc/main.cpp.o
+.PHONY : mysrc/main.o
 
 # target to build an object file
-src/renderer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/renderer.cpp.o
-.PHONY : src/renderer.cpp.o
+mysrc/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MySnakeGame.dir/build.make CMakeFiles/MySnakeGame.dir/mysrc/main.cpp.o
+.PHONY : mysrc/main.cpp.o
 
-src/renderer.i: src/renderer.cpp.i
-.PHONY : src/renderer.i
+mysrc/main.i: mysrc/main.cpp.i
+.PHONY : mysrc/main.i
 
 # target to preprocess a source file
-src/renderer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/renderer.cpp.i
-.PHONY : src/renderer.cpp.i
+mysrc/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MySnakeGame.dir/build.make CMakeFiles/MySnakeGame.dir/mysrc/main.cpp.i
+.PHONY : mysrc/main.cpp.i
 
-src/renderer.s: src/renderer.cpp.s
-.PHONY : src/renderer.s
+mysrc/main.s: mysrc/main.cpp.s
+.PHONY : mysrc/main.s
 
 # target to generate assembly for a file
-src/renderer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/renderer.cpp.s
-.PHONY : src/renderer.cpp.s
+mysrc/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MySnakeGame.dir/build.make CMakeFiles/MySnakeGame.dir/mysrc/main.cpp.s
+.PHONY : mysrc/main.cpp.s
 
-src/snake.o: src/snake.cpp.o
-.PHONY : src/snake.o
+mysrc/renderer.o: mysrc/renderer.cpp.o
+.PHONY : mysrc/renderer.o
 
 # target to build an object file
-src/snake.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/snake.cpp.o
-.PHONY : src/snake.cpp.o
+mysrc/renderer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MySnakeGame.dir/build.make CMakeFiles/MySnakeGame.dir/mysrc/renderer.cpp.o
+.PHONY : mysrc/renderer.cpp.o
 
-src/snake.i: src/snake.cpp.i
-.PHONY : src/snake.i
+mysrc/renderer.i: mysrc/renderer.cpp.i
+.PHONY : mysrc/renderer.i
 
 # target to preprocess a source file
-src/snake.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/snake.cpp.i
-.PHONY : src/snake.cpp.i
+mysrc/renderer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MySnakeGame.dir/build.make CMakeFiles/MySnakeGame.dir/mysrc/renderer.cpp.i
+.PHONY : mysrc/renderer.cpp.i
 
-src/snake.s: src/snake.cpp.s
-.PHONY : src/snake.s
+mysrc/renderer.s: mysrc/renderer.cpp.s
+.PHONY : mysrc/renderer.s
 
 # target to generate assembly for a file
-src/snake.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/snake.cpp.s
-.PHONY : src/snake.cpp.s
+mysrc/renderer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MySnakeGame.dir/build.make CMakeFiles/MySnakeGame.dir/mysrc/renderer.cpp.s
+.PHONY : mysrc/renderer.cpp.s
+
+mysrc/snake.o: mysrc/snake.cpp.o
+.PHONY : mysrc/snake.o
+
+# target to build an object file
+mysrc/snake.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MySnakeGame.dir/build.make CMakeFiles/MySnakeGame.dir/mysrc/snake.cpp.o
+.PHONY : mysrc/snake.cpp.o
+
+mysrc/snake.i: mysrc/snake.cpp.i
+.PHONY : mysrc/snake.i
+
+# target to preprocess a source file
+mysrc/snake.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MySnakeGame.dir/build.make CMakeFiles/MySnakeGame.dir/mysrc/snake.cpp.i
+.PHONY : mysrc/snake.cpp.i
+
+mysrc/snake.s: mysrc/snake.cpp.s
+.PHONY : mysrc/snake.s
+
+# target to generate assembly for a file
+mysrc/snake.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MySnakeGame.dir/build.make CMakeFiles/MySnakeGame.dir/mysrc/snake.cpp.s
+.PHONY : mysrc/snake.cpp.s
 
 # Help Target
 help:
@@ -257,22 +257,22 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... SnakeGame"
-	@echo "... src/controller.o"
-	@echo "... src/controller.i"
-	@echo "... src/controller.s"
-	@echo "... src/game.o"
-	@echo "... src/game.i"
-	@echo "... src/game.s"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
-	@echo "... src/renderer.o"
-	@echo "... src/renderer.i"
-	@echo "... src/renderer.s"
-	@echo "... src/snake.o"
-	@echo "... src/snake.i"
-	@echo "... src/snake.s"
+	@echo "... MySnakeGame"
+	@echo "... mysrc/controller.o"
+	@echo "... mysrc/controller.i"
+	@echo "... mysrc/controller.s"
+	@echo "... mysrc/game.o"
+	@echo "... mysrc/game.i"
+	@echo "... mysrc/game.s"
+	@echo "... mysrc/main.o"
+	@echo "... mysrc/main.i"
+	@echo "... mysrc/main.s"
+	@echo "... mysrc/renderer.o"
+	@echo "... mysrc/renderer.i"
+	@echo "... mysrc/renderer.s"
+	@echo "... mysrc/snake.o"
+	@echo "... mysrc/snake.i"
+	@echo "... mysrc/snake.s"
 .PHONY : help
 
 

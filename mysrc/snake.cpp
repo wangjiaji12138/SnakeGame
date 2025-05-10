@@ -63,7 +63,7 @@ void Snake::UpdateBody(SDL_Point& current_head_cell,SDL_Point& prev_head_cell) {
     
     // check if the snake crushed the remain body
     for(auto const &item : body) {
-        if(current_head_cell.x == item.x && current_head_cell == item.y) {
+        if(current_head_cell.x == item.x && current_head_cell.y == item.y) {
             alive = false;
         }
     }
