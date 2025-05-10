@@ -12,7 +12,7 @@ void Controller::ChangeDirection(Snake &snake, Snake::Direciton input, Snake::Di
 void Controller::HandleInput(bool &running, Snake &snake) const {
     SDL_Event e;
     while(SDL_PollEvent(&e)){   // deal with an event in the queue of SDL
-        if(e.type == SDL_QUIT){
+        if(e.type == SDL_QUIT || !snake.alive){
             running = false;
         }
         else if(e.type == SDL_KEYDOWN){

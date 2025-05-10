@@ -20,7 +20,7 @@ public:
 
     Direciton direction = Direciton::kUp;
 
-    float speed{0.05f};
+    float speed{0.1f};
     int size{1};
     bool alive{true};
     float head_x;
