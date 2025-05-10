@@ -5,9 +5,10 @@ using namespace std;
 Game::Game(size_t grid_width, size_t grid_height)
     : snake(grid_width,grid_height),
       engine(dev()),
-      random_w(0,static_cast<int>(grid_width-1)),
-      random_h(0,static_cast<int>(grid_height-1)) {
-    PlaceFood();
+      random_w(0, static_cast<int>(grid_width - 1)),
+      random_h(0, static_cast<int>(grid_height - 1)),
+      food(grid_width,grid_height){
+    CreateFood();
 }
 
 void Game::Run(Controller const &controller, Renderer &renderer,
@@ -43,18 +44,15 @@ void Game::Run(Controller const &controller, Renderer &renderer,
     }
 }
 
-void Game::PlaceFood() {
-    int x,y;
-    while(true) {
-        x = random_w(engine);
-        y = random_h(engine);
-
-        if(!snake.SnakeCell(x,y)) {
-            food.x = x;
-            food.y = y;
-            return;
-        }
+void Game::Over(Controller const &controller, Renderer &renderer) {
+    renderer.InitTTF();
+    Uint32 start_timestamp = SDL_GetTicks();
+    while(SDL_GetTicks() - start_timestamp < 3000){
+        renderer.RenderGameOver(score, snake.size);
+        SDL_Delay(16);
     }
+    
+    // renderer.~Renderer();
 }
 
 void Game::Update() {
@@ -66,9 +64,24 @@ void Game::Update() {
 
     if(food.x == new_x && food.y == new_y) {
         score++;
-        PlaceFood();
+        CreateFood();
         snake.GrowBody();
         snake.speed +=0.02;
+    }
+}
+
+void Game::CreateFood() {
+    int x,y;
+    while(true) {
+        x = random_w.RandomNum();
+        y = random_h.RandomNum();
+
+        if(!snake.SnakeCell(x,y)) {
+            food.x = x;
+            food.y = y;
+            food.color = Colour::RandomColor();
+            return;
+        }
     }
 }
 

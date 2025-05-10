@@ -860,6 +860,10 @@ CMakeFiles/MySnakeGame.dir/mysrc/main.cpp.o: \
   /opt/homebrew/Cellar/sdl2/2.32.6/include/SDL2/SDL_locale.h \
   /opt/homebrew/Cellar/sdl2/2.32.6/include/SDL2/SDL_misc.h \
   /Users/cardij/Documents/CppND-Capstone-Snake-Game/mysrc/game.h \
+  /Users/cardij/Documents/CppND-Capstone-Snake-Game/mysrc/renderer.h \
+  /Users/cardij/Documents/CppND-Capstone-Snake-Game/mysrc/food.h \
+  /opt/homebrew/Cellar/sdl2_ttf/2.24.0/include/SDL2/SDL_ttf.h \
+  /Users/cardij/Documents/CppND-Capstone-Snake-Game/mysrc/randomizer.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/random \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/bernoulli_distribution.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/uniform_real_distribution.h \
@@ -911,4 +915,4 @@ CMakeFiles/MySnakeGame.dir/mysrc/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/student_t_distribution.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/uniform_random_bit_generator.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/weibull_distribution.h \
-  /Users/cardij/Documents/CppND-Capstone-Snake-Game/mysrc/renderer.h
+  /Users/cardij/Documents/CppND-Capstone-Snake-Game/mysrc/colour.h

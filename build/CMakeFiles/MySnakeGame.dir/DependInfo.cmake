@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/cardij/Documents/CppND-Capstone-Snake-Game/mysrc/colour.cpp" "CMakeFiles/MySnakeGame.dir/mysrc/colour.cpp.o" "gcc" "CMakeFiles/MySnakeGame.dir/mysrc/colour.cpp.o.d"
   "/Users/cardij/Documents/CppND-Capstone-Snake-Game/mysrc/controller.cpp" "CMakeFiles/MySnakeGame.dir/mysrc/controller.cpp.o" "gcc" "CMakeFiles/MySnakeGame.dir/mysrc/controller.cpp.o.d"
   "/Users/cardij/Documents/CppND-Capstone-Snake-Game/mysrc/game.cpp" "CMakeFiles/MySnakeGame.dir/mysrc/game.cpp.o" "gcc" "CMakeFiles/MySnakeGame.dir/mysrc/game.cpp.o.d"
   "/Users/cardij/Documents/CppND-Capstone-Snake-Game/mysrc/main.cpp" "CMakeFiles/MySnakeGame.dir/mysrc/main.cpp.o" "gcc" "CMakeFiles/MySnakeGame.dir/mysrc/main.cpp.o.d"

@@ -17,11 +17,7 @@ int main(){
     game.Run(controller,renderer,kMsPerFrame);
     
     // game over,close the game
-    
-    SDL_Delay(3000);
-    renderer.~Renderer();
-    //after game over
-
+    game.Over(controller,renderer);
     cout << "Game has terminated successfully!\n";
     cout << "Score:" << game.GetScore() << "\n";
     cout << "Size:" << game.GetSize() << endl;

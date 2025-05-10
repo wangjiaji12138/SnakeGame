@@ -225,6 +225,12 @@ MySnakeGame_SOURCE_DIR:STATIC=/Users/cardij/Documents/CppND-Capstone-Snake-Game
 //The directory containing a CMake configuration file for SDL2.
 SDL2_DIR:PATH=/opt/homebrew/lib/cmake/SDL2
 
+//The directory containing a CMake configuration file for SDL2_TTF.
+SDL2_TTF_DIR:PATH=/opt/homebrew/lib/cmake/SDL2_ttf
+
+//The directory containing a CMake configuration file for SDL2_ttf.
+SDL2_ttf_DIR:PATH=/opt/homebrew/lib/cmake/SDL2_ttf
+
 
 ########################
 # INTERNAL cache entries

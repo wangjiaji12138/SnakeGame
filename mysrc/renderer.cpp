@@ -1,13 +1,13 @@
 #include "renderer.h"
 #include <iostream>
 #include <string>
-
+using namespace std;
 Renderer::Renderer(const size_t screen_width, const size_t screen_height,
                    const size_t grid_width, const size_t grid_height)
-  : screen_width(screen_width),
-    screen_height(screen_height),
-    grid_width(grid_width),
-    grid_height(grid_height) {
+    :   screen_width(screen_width),
+        screen_height(screen_height),
+        grid_width(grid_width),
+        grid_height(grid_height) {
     // Initialize SDL
     if(SDL_Init(SDL_INIT_VIDEO) < 0){
         cerr << "SDL could not initialize.\n";
@@ -35,23 +35,25 @@ Renderer::Renderer(const size_t screen_width, const size_t screen_height,
 
 Renderer::~Renderer(){
     // you'd better destroy window manually to avoid the memory leak
+    TTF_CloseFont(font);
+    TTF_Quit();
     SDL_DestroyWindow(sdl_window);
     SDL_Quit();
 }
 
-void Renderer::Render(Snake const snake, SDL_Point const &food) {
-    // food block
-    SDL_Rect block;
-    block.w = screen_width / grid_width;
-    block.h = screen_height / grid_height;
-
+void Renderer::Render(Snake const &snake, Food const &food) {
     // clear the screen,set the backgrond clour and alpha value
     // it will repeat every frame to make sure no older element left
     SDL_SetRenderDrawColor(sdl_renderer, 0x1E,0x1E,0x1E,0xFF);
     SDL_RenderClear(sdl_renderer);
 
     // render food
-    SDL_SetRenderDrawColor(sdl_renderer, 0xFF,0xCC,0x00,0xFF);
+    SDL_SetRenderDrawColor(sdl_renderer, food.color.r, food.color.g, food.color.b, food.color.a);
+
+    // food block
+    SDL_Rect block;
+    block.w = screen_width / grid_width;
+    block.h = screen_height / grid_height;
     // convert grid coordinates to pixel coordinates
     block.x = food.x * block.w;
     block.y = food.y * block.h;
@@ -80,8 +82,41 @@ void Renderer::Render(Snake const snake, SDL_Point const &food) {
     SDL_RenderPresent(sdl_renderer);
 }
 
+void Renderer::InitTTF() {
+    if(TTF_Init()== -1){
+        cerr << "TTF could not be initialized.\n";
+        cerr << "TTF Error: " << TTF_GetError() << "\n";
+        return;
+    }
+    font = TTF_OpenFont(fontFilePath.c_str(),48);
+    if(!font){
+        cerr << "Could not open font file.\n";
+        cerr << "TTF Error: " << TTF_GetError() << "\n";
+        return;
+    }
+}
+
+void Renderer::RenderGameOver(int score, int size) {
+    SDL_SetRenderDrawColor(sdl_renderer, 0x1E,0x1E,0x1E,0xFF);
+    SDL_RenderClear(sdl_renderer);
+
+    SDL_Color textClour = {0xFF, 0x00, 0x00, 0xFF};
+    SDL_Surface* textSurface = TTF_RenderText_Solid(font, "GAME OVER", textClour);
+    SDL_Texture* textTexture = SDL_CreateTextureFromSurface(sdl_renderer, textSurface);
+
+    SDL_Rect textRect;
+    textRect.w = 300;
+    textRect.h = 100;
+    textRect.x = (screen_width-textRect.w)/2;
+	textRect.y = (screen_height-textRect.h)/2;
+	
+
+
+    SDL_RenderCopy(sdl_renderer, textTexture, nullptr, &textRect);
+    SDL_RenderPresent(sdl_renderer);
+}
+
 void Renderer::UpdateWindowTitle(int score,int fps) {
     string title("Snake Score: " +to_string(score) + " FPS: " + to_string(fps));
     SDL_SetWindowTitle(sdl_window,title.c_str());
 }
-             

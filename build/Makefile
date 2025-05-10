@@ -129,6 +129,30 @@ MySnakeGame/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MySnakeGame.dir/build.make CMakeFiles/MySnakeGame.dir/build
 .PHONY : MySnakeGame/fast
 
+mysrc/colour.o: mysrc/colour.cpp.o
+.PHONY : mysrc/colour.o
+
+# target to build an object file
+mysrc/colour.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MySnakeGame.dir/build.make CMakeFiles/MySnakeGame.dir/mysrc/colour.cpp.o
+.PHONY : mysrc/colour.cpp.o
+
+mysrc/colour.i: mysrc/colour.cpp.i
+.PHONY : mysrc/colour.i
+
+# target to preprocess a source file
+mysrc/colour.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MySnakeGame.dir/build.make CMakeFiles/MySnakeGame.dir/mysrc/colour.cpp.i
+.PHONY : mysrc/colour.cpp.i
+
+mysrc/colour.s: mysrc/colour.cpp.s
+.PHONY : mysrc/colour.s
+
+# target to generate assembly for a file
+mysrc/colour.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MySnakeGame.dir/build.make CMakeFiles/MySnakeGame.dir/mysrc/colour.cpp.s
+.PHONY : mysrc/colour.cpp.s
+
 mysrc/controller.o: mysrc/controller.cpp.o
 .PHONY : mysrc/controller.o
 
@@ -258,6 +282,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... MySnakeGame"
+	@echo "... mysrc/colour.o"
+	@echo "... mysrc/colour.i"
+	@echo "... mysrc/colour.s"
 	@echo "... mysrc/controller.o"
 	@echo "... mysrc/controller.i"
 	@echo "... mysrc/controller.s"

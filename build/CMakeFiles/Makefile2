@@ -85,12 +85,12 @@ clean: CMakeFiles/MySnakeGame.dir/clean
 CMakeFiles/MySnakeGame.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MySnakeGame.dir/build.make CMakeFiles/MySnakeGame.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MySnakeGame.dir/build.make CMakeFiles/MySnakeGame.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/cardij/Documents/CppND-Capstone-Snake-Game/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target MySnakeGame"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/cardij/Documents/CppND-Capstone-Snake-Game/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target MySnakeGame"
 .PHONY : CMakeFiles/MySnakeGame.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/MySnakeGame.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/cardij/Documents/CppND-Capstone-Snake-Game/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/cardij/Documents/CppND-Capstone-Snake-Game/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/MySnakeGame.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/cardij/Documents/CppND-Capstone-Snake-Game/build/CMakeFiles 0
 .PHONY : CMakeFiles/MySnakeGame.dir/rule
@@ -102,7 +102,7 @@ MySnakeGame: CMakeFiles/MySnakeGame.dir/rule
 # codegen rule for target.
 CMakeFiles/MySnakeGame.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MySnakeGame.dir/build.make CMakeFiles/MySnakeGame.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/cardij/Documents/CppND-Capstone-Snake-Game/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Finished codegen for target MySnakeGame"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/cardij/Documents/CppND-Capstone-Snake-Game/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Finished codegen for target MySnakeGame"
 .PHONY : CMakeFiles/MySnakeGame.dir/codegen
 
 # clean rule for target.
